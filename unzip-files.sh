@@ -82,7 +82,6 @@ unzip -j -o ../../../${DEVICE}_update.zip -d ../../../vendor/htc/$DEVICE/proprie
      system/lib/libsorenson.so \
      system/lib/libspeech.so \
 	 system/lib/libaudioeq.so \
-	 system/lib/libcamera.so \
 	 system/lib/libgps.so \
 	 system/lib/libhtc_acoustic.so \
 	 system/lib/libhtc_ril.so \
@@ -178,7 +177,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
     vendor/htc/__DEVICE__/proprietary/libaes.so:system/lib/libaes.so \\
     vendor/htc/__DEVICE__/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
-    vendor/htc/__DEVICE__/proprietary/libcamera.so:system/lib/libcamera.so \\
     vendor/htc/__DEVICE__/proprietary/libcurl.so:system/lib/libcurl.so \\
     vendor/htc/__DEVICE__/proprietary/libflashlite.so:system/lib/libflashlite.so \\
     vendor/htc/__DEVICE__/proprietary/libflashsnddec.so:system/lib/libflashsnddec.so \\
