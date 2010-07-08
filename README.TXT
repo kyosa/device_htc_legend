@@ -22,6 +22,7 @@ README.TXT: device_htc_legend.git
 
 
   Obtain an OTA package from *ANYWHERE* and copy to android-cm/.
+  NOTE: sorry, extract-files.sh does not work yet.
 
   $ cp ....... legend_update.zip
 
