@@ -1,0 +1,208 @@
+#!/bin/sh
+
+# Copyright (C) 2010 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+DEVICE=legend
+
+mkdir -p ../../../vendor/htc/$DEVICE/proprietary
+
+unzip -j -o ../../../${DEVICE}_update.zip -d ../../../vendor/htc/$DEVICE/proprietary \
+	 system/bin/akmd \
+     system/bin/bluetoothd \
+     system/bin/bma150_usr \
+     system/bin/bootcomplete \
+     system/bin/btipsd \
+     system/bin/btipsd_cli \
+     system/bin/mmclient \
+     system/bin/monitorMTD \
+     system/bin/netsharing \
+     system/bin/rsync \
+     system/bin/shutdown \
+     system/bin/tiwlan_cu \
+     system/bin/tiwlan_loader \
+     system/xbin/wireless_modem \
+	 system/etc/01_qcomm_omx.cfg \
+	 system/etc/AudioFilter.csv \
+	 system/etc/AudioPara4.csv \
+	 system/etc/AudioPara4_WB.csv \
+	 system/etc/AudioPara_HTC_FR.csv \
+	 system/etc/AudioPara_HTC_WB_FR.csv \
+	 system/etc/AudioPreProcess.csv \
+         system/etc/firmware/wl1271.bin \
+         system/etc/firmware/avpr.bts \
+     	 system/etc/firmware/fmc_init_1273.2.bts \
+     	 system/etc/firmware/fm_rx_init_1273.2.bts \
+     	 system/etc/firmware/vac_config.ini \
+         system/etc/firmware/yamato_pm4.fw \
+         system/etc/firmware/yamato_pfp.fw \
+         system/etc/firmware/tiinit_7.2.31.bts \
+     	 system/etc/wifi/Fw1273_CHIP.bin \
+         system/etc/wifi/tiwlan.ini \
+         system/etc/wifi/wpa_supplicant.conf \
+	 system/lib/egl/libGLES_android.so \
+     system/lib/egl/libEGL_adreno200.so \
+     system/lib/egl/libGLESv1_CM_adreno200.so \
+     system/lib/egl/libGLESv2_adreno200.so \
+     system/etc/pvasflocal.cfg \
+     system/usr/keychars/legend-keypad.kcm.bin \
+     system/lib/hw/copybit.msm7k.so \
+     system/lib/hw/gralloc.msm7k.so \
+     system/lib/hw/lights.msm7k.so \
+     system/lib/hw/sensors.legend.so \
+     system/lib/libaes.so \
+     system/lib/libcurl.so \
+     system/lib/libflashlite.so \
+     system/lib/libflashsnddec.so \
+     system/lib/libflsaplayerlib.so \
+     system/lib/libgsl.so \
+     system/lib/libhtcbitmapfactory.so \
+     system/lib/libiconv.so \
+     system/lib/libmmclient.so \
+     system/lib/libomx_wmadec_sharedlibrary.so \
+     system/lib/libomx_wmvdec_sharedlibrary.so \
+     system/lib/libon2.so \
+     system/lib/libopencorehw.so \
+     system/lib/libpvasfcommon.so \
+     system/lib/libpvasflocalpb.so \
+     system/lib/libpvasflocalpbreg.so \
+     system/lib/libqcomm_omx.so \
+     system/lib/libsiimpl.so \
+     system/lib/libsorenson.so \
+     system/lib/libspeech.so \
+	 system/lib/libaudioeq.so \
+	 system/lib/libcamera.so \
+	 system/lib/libgps.so \
+	 system/lib/libhtc_acoustic.so \
+	 system/lib/libhtc_ril.so \
+	 system/lib/libmm-adspsvc.so \
+	 system/lib/liboemcamera.so \
+	 system/lib/libOmxCore.so \
+	 system/lib/libOmxH264Dec.so \
+	 system/lib/libOmxMpeg4Dec.so \
+	 system/lib/libOmxVidEnc.so
+	 
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/bluetoothd
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/bma150_usr
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/bootcomplete
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/btipsd
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/btipsd_cli
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/mmclient
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/monitorMTD
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/netsharing
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/rsync
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/shutdown
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/tiwlan_cu
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/tiwlan_loader
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/wireless_modem
+
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/device_$DEVICE-vendor-blobs.mk
+# Copyright (C) 2010 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# This file is generated by device/htc/__DEVICE__/extract-files.sh
+
+PRODUCT_COPY_FILES := \\
+    vendor/htc/__DEVICE__/proprietary/libgps.so:obj/lib/libgps.so \\
+    device/htc/__DEVICE__/init.rc:root/init.rc
+
+PRODUCT_COPY_FILES += \\
+    vendor/htc/__DEVICE__/proprietary/akmd:system/bin/akmd \\
+    vendor/htc/__DEVICE__/proprietary/bluetoothd:system/bin/bluetoothd \\
+    vendor/htc/__DEVICE__/proprietary/bma150_usr:system/bin/bma150_usr \\
+    vendor/htc/__DEVICE__/proprietary/bootcomplete:system/bin/bootcomplete \\
+    vendor/htc/__DEVICE__/proprietary/btipsd:system/bin/btipsd \\
+    vendor/htc/__DEVICE__/proprietary/btipsd_cli:system/bin/btipsd_cli \\
+    vendor/htc/__DEVICE__/proprietary/mmclient:system/bin/mmclient \\
+    vendor/htc/__DEVICE__/proprietary/monitorMTD:system/bin/monitorMTD \\
+    vendor/htc/__DEVICE__/proprietary/netsharing:system/bin/netsharing \\
+    vendor/htc/__DEVICE__/proprietary/rsync:system/bin/rsync \\
+    vendor/htc/__DEVICE__/proprietary/shutdown:system/bin/shutdown \\
+    vendor/htc/__DEVICE__/proprietary/tiwlan_cu:system/bin/tiwlan_cu \\
+    vendor/htc/__DEVICE__/proprietary/tiwlan_loader:system/bin/tiwlan_loader \\
+    vendor/htc/__DEVICE__/proprietary/wireless_modem:system/xbin/wireless_modem \\
+    vendor/htc/__DEVICE__/proprietary/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \\
+    vendor/htc/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
+    vendor/htc/__DEVICE__/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
+    vendor/htc/__DEVICE__/proprietary/AudioPara4_WB.csv:system/etc/AudioPara4_WB.csv \\
+    vendor/htc/__DEVICE__/proprietary/AudioPara_HTC_FR.csv:system/etc/AudioPara_HTC_FR.csv \\
+    vendor/htc/__DEVICE__/proprietary/AudioPara_HTC_WB_FR.csv:system/etc/AudioPara_HTC_WB_FR.csv \\
+    vendor/htc/__DEVICE__/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \\
+    vendor/htc/__DEVICE__/proprietary/wl1271.bin:system/etc/firmware/wl1271.bin \\
+    vendor/htc/__DEVICE__/proprietary/avpr.bts:system/etc/firmware/avpr.bts \\
+    vendor/htc/__DEVICE__/proprietary/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \\
+    vendor/htc/__DEVICE__/proprietary/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \\
+    vendor/htc/__DEVICE__/proprietary/vac_config.ini:system/etc/firmware/vac_config.ini \\
+    vendor/htc/__DEVICE__/proprietary/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \\
+    vendor/htc/__DEVICE__/proprietary/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \\
+    vendor/htc/__DEVICE__/proprietary/tiinit_7.2.31.bts:system/etc/firmware/tiinit_7.2.31.bts \\
+    vendor/htc/__DEVICE__/proprietary/Fw1273_CHIP.bin:system/etc/wifi/Fw1273_CHIP.bin \\
+    vendor/htc/__DEVICE__/proprietary/tiwlan.ini:system/etc/wifi/tiwlan.ini \\
+    vendor/htc/__DEVICE__/proprietary/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
+    vendor/htc/__DEVICE__/proprietary/pvasflocal.cfg:system/etc/pvasflocal.cfg \\
+    vendor/htc/__DEVICE__/proprietary/legend-keypad.kcm.bin:system/usr/keychars/legend-keypad.kcm.bin \\
+    vendor/htc/__DEVICE__/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
+    vendor/htc/__DEVICE__/proprietary/libGLES_android.so:system/lib/egl/libGLES_android.so \\
+    vendor/htc/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \\
+    vendor/htc/__DEVICE__/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \\
+    vendor/htc/__DEVICE__/proprietary/copybit.msm7k.so:system/lib/hw/copybit.msm7k.so \\
+    vendor/htc/__DEVICE__/proprietary/gralloc.msm7k.so:system/lib/hw/gralloc.msm7k.so \\
+    vendor/htc/__DEVICE__/proprietary/lights.msm7k.so:system/lib/hw/lights.msm7k.so \\
+    vendor/htc/__DEVICE__/proprietary/sensors.legend.so:system/lib/hw/sensors.legend.so \\
+    vendor/htc/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
+    vendor/htc/__DEVICE__/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
+    vendor/htc/__DEVICE__/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
+    vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
+    vendor/htc/__DEVICE__/proprietary/libaes.so:system/lib/libaes.so \\
+    vendor/htc/__DEVICE__/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
+    vendor/htc/__DEVICE__/proprietary/libcamera.so:system/lib/libcamera.so \\
+    vendor/htc/__DEVICE__/proprietary/libcurl.so:system/lib/libcurl.so \\
+    vendor/htc/__DEVICE__/proprietary/libflashlite.so:system/lib/libflashlite.so \\
+    vendor/htc/__DEVICE__/proprietary/libflashsnddec.so:system/lib/libflashsnddec.so \\
+    vendor/htc/__DEVICE__/proprietary/libflsaplayerlib.so:system/lib/libflsaplayerlib.so \\
+    vendor/htc/__DEVICE__/proprietary/libgps.so:system/lib/libgps.so \\
+    vendor/htc/__DEVICE__/proprietary/libgsl.so:system/lib/libgsl.so \\
+    vendor/htc/__DEVICE__/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
+    vendor/htc/__DEVICE__/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \\
+    vendor/htc/__DEVICE__/proprietary/libhtcbitmapfactory.so:system/lib/libhtcbitmapfactory.so \\
+    vendor/htc/__DEVICE__/proprietary/libiconv.so:system/lib/libiconv.so \\
+    vendor/htc/__DEVICE__/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
+    vendor/htc/__DEVICE__/proprietary/libmmclient.so:system/lib/libmmclient.so \\
+    vendor/htc/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
+    vendor/htc/__DEVICE__/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
+    vendor/htc/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
+    vendor/htc/__DEVICE__/proprietary/libon2.so:system/lib/libon2.so \\
+    vendor/htc/__DEVICE__/proprietary/libopencorehw.so:system/lib/libopencorehw.so \\
+    vendor/htc/__DEVICE__/proprietary/libpvasfcommon.so:system/lib/libpvasfcommon.so \\
+    vendor/htc/__DEVICE__/proprietary/libpvasflocalpb.so:system/lib/libpvasflocalpb.so \\
+    vendor/htc/__DEVICE__/proprietary/libpvasflocalpbreg.so:system/lib/libpvasflocalpbreg.so \\
+    vendor/htc/__DEVICE__/proprietary/libqcomm_omx.so:system/lib/libqcomm_omx.so \\
+    vendor/htc/__DEVICE__/proprietary/libsiimpl.so:system/lib/libsiimpl.so \\
+    vendor/htc/__DEVICE__/proprietary/libsorenson.so:system/lib/libsorenson.so \\
+    vendor/htc/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
+EOF
+
+./setup-makefiles.sh
