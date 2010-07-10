@@ -16,6 +16,9 @@
 
 DEVICE=legend
 
+mkdir -p ../../../vendor/cyanogen/prebuilt/$DEVICE/media
+cp ../../../vendor/cyanogen/prebuilt/dream_sapphire/media/bootanimation.zip ../../../vendor/cyanogen/prebuilt/$DEVICE/media
+
 mkdir -p ../../../vendor/htc/$DEVICE
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/device_$DEVICE-vendor.mk
@@ -39,7 +42,6 @@ mkdir -p ../../../vendor/htc/$DEVICE
 PRODUCT_PACKAGES := \\
     LiveWallpapers \\
     LiveWallpapersPicker \\
-    MagicSmokeWallpapers \\
     VisualizationWallpapers \\
     librs_jni
 

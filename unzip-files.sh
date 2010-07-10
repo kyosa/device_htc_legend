@@ -59,7 +59,6 @@ unzip -j -o ../../../${DEVICE}_update.zip -d ../../../vendor/htc/$DEVICE/proprie
      system/usr/keychars/legend-keypad.kcm.bin \
      system/lib/hw/copybit.msm7k.so \
      system/lib/hw/gralloc.msm7k.so \
-     system/lib/hw/lights.msm7k.so \
      system/lib/hw/sensors.legend.so \
      system/lib/libaes.so \
      system/lib/libcurl.so \
@@ -169,7 +168,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \\
     vendor/htc/__DEVICE__/proprietary/copybit.msm7k.so:system/lib/hw/copybit.msm7k.so \\
     vendor/htc/__DEVICE__/proprietary/gralloc.msm7k.so:system/lib/hw/gralloc.msm7k.so \\
-    vendor/htc/__DEVICE__/proprietary/lights.msm7k.so:system/lib/hw/lights.msm7k.so \\
     vendor/htc/__DEVICE__/proprietary/sensors.legend.so:system/lib/hw/sensors.legend.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
