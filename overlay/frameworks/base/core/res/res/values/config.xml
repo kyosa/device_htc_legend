@@ -38,53 +38,35 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-    	<item>11</item>
-    	<item>41</item>
-    	<item>91</item>
-    	<item>161</item>
-    	<item>226</item>
-    	<item>321</item>
-    	<item>641</item>
-    	<item>1281</item>
-    	<item>2601</item>
+        <item>200</item>
+        <item>400</item>
+        <item>1000</item>
+        <item>3000</item>
     </integer-array>
-
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-    	<item>8</item>
-    	<item>16</item>
-    	<item>34</item>
-    	<item>61</item>
-    	<item>96</item>
-    	<item>138</item>
-    	<item>167</item>
-    	<item>195</item>
-    	<item>227</item>
-    	<item>255</item>
+        <item>25</item>
+        <item>55</item>
+        <item>70</item>
+        <item>70</item>
+        <item>250</item>
     </integer-array>
-
 
     <!-- Array of output values for button backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
-    	<item>255</item>
-    	<item>255</item>
-    	<item>255</item>
-    	<item>255</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
+        <item>255</item>
+        <item>255</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </integer-array>
-
 
     <!-- Array of output values for keyboard backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
@@ -92,26 +74,16 @@
          Passion has no keyboard so all values are zero.
     -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-    	<item>255</item>
-    	<item>255</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
-    	<item>0</item>
+        <item>255</item>
+        <item>255</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </integer-array>
     
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not 
          specified -->
     <string name="default_wallpaper_component">com.android.wallpaper/.nexus.NexusWallpaper</string>
-
-    <!-- Amount of time it takes for the light sensor to warm up in milliseconds.
-         For this time after the screen turns on, the Power Manager
-         will not debounce light sensor readings -->
-    <integer name="config_lightSensorWarmupTime">0</integer>
 
     <!-- Default color for notification LED is white -->
     <color name="config_defaultNotificationColor">#ffffffff</color>
@@ -166,11 +138,6 @@
 
 
     <!-- Boolean indicating if we require the use of DUN on mobile for tethering -->
-    <bool translatable="false" name="config_tether_dun_required">false</bool>
-
-    <!--
-     Boolean indicating if we require the use of DUN on mobile for tethering 
-    -->
     <bool translatable="false" name="config_tether_dun_required">false</bool>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->

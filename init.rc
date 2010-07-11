@@ -317,6 +317,8 @@ on boot
 # Include extra init file
     import /system/etc/init.local.rc
 
+# Run sysinit
+    exec /system/bin/sysinit
 
     class_start default
 

@@ -78,6 +78,7 @@ BOARD_GPS_LIBRARIES := libgps librpc
 
 BOARD_USES_OLD_CAMERA_HACK := true
 USE_CAMERA_STUB := false
+
 EOF
 
 mkdir -p ../../../vendor/htc/legend/overlay/packages/apps/Launcher2/res/layout
