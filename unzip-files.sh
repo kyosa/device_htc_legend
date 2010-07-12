@@ -72,11 +72,9 @@ unzip -j -o ../../../${DEVICE}_update.zip -d ../../../vendor/htc/$DEVICE/proprie
      system/lib/libomx_wmadec_sharedlibrary.so \
      system/lib/libomx_wmvdec_sharedlibrary.so \
      system/lib/libon2.so \
-     system/lib/libopencorehw.so \
      system/lib/libpvasfcommon.so \
      system/lib/libpvasflocalpb.so \
      system/lib/libpvasflocalpbreg.so \
-     system/lib/libqcomm_omx.so \
      system/lib/libsiimpl.so \
      system/lib/libsorenson.so \
      system/lib/libspeech.so \
@@ -198,8 +196,5 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libsorenson.so:system/lib/libsorenson.so \\
     vendor/htc/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
 EOF
-
-#    vendor/htc/__DEVICE__/proprietary/libopencorehw.so:system/lib/libopencorehw.so \\
-#    vendor/htc/__DEVICE__/proprietary/libqcomm_omx.so:system/lib/libqcomm_omx.so \\
 
 ./setup-makefiles.sh

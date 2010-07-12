@@ -54,6 +54,9 @@ README.TXT: device_htc_legend.git
 
   Build CM6
 
+  $ make acp
+  (to avoid errors on distributed building)
+
   $ make -j4 otapackage
 
 
