@@ -41,7 +41,7 @@ README.TXT: device_htc_legend.git
   $ mv device_htc_legend/ legend
   $ cd legend/
   $ ./unzip-files.sh 
-  $ tar -zcvf mydroid.patch.tgz -C ../../..
+  $ tar -zxvf mydroid.patch.tgz -C ../../..
   $ cd ../../..
 
 
