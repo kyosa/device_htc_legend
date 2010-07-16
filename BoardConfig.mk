@@ -73,7 +73,8 @@ BOARD_VENDOR_QCOM_AMSS_VERSION := 4735
 
 # The size of a block that can be marked bad.
 BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_CAMERA_LIBRARIES := libcameraservice libcamera
+#BOARD_CAMERA_LIBRARIES := libcameraservice libcamera
+BOARD_USES_ECLAIR_LIBCAMERA := true
 
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/htc/legend/egl.cfg
