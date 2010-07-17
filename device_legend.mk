@@ -107,6 +107,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.sync=yes \
     dalvik.vm.stack-trace-file=/data/anr/traces.txt
 
+# Disable JIT by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.execution-mode=int:fast
+
 DEVICE_PACKAGE_OVERLAYS += device/htc/legend/overlay
 
 # media profiles and capabilities spec
