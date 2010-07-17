@@ -25,8 +25,8 @@ USE_CAMERA_STUB := true
 -include vendor/htc/legend/BoardConfigVendor.mk
 
 TARGET_BOARD_PLATFORM := msm7k
-#TARGET_ARCH_VARIANT := armv5te-vfp
-TARGET_ARCH_VARIANT := armv6-vfp
+TARGET_ARCH_VARIANT := armv5te-vfp
+#TARGET_ARCH_VARIANT := armv6-vfp
 TARGET_CPU_ABI := armeabi-v6l
 TARGET_CPU_ABI2 := armeabi
 

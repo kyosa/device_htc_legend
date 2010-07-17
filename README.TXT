@@ -42,6 +42,13 @@ README.TXT: device_htc_legend.git
   $ cd legend/
   $ ./unzip-files.sh 
   $ tar -zxvf mydroid.patch.tgz -C ../../..
+
+    (experimental)
+    If you like to try with 'TARGET_ARCH_VARIANT := armv6-vfp',
+    type also the following command.
+
+    $ tar -zxvf armv6-vfp.tgz -C ../../..
+
   $ cd ../../..
 
 
