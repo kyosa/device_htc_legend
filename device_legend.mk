@@ -54,7 +54,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.dtm=0 \
     ro.ril.hsdpa.category=8 \
     ro.ril.hsupa.category=5 \
-    ro.ril.hsxpa=2 \
     ro.ril.disable.fd.plmn.prefix=23402,23410,23411
 
 # Time between scans in seconds. Keep it high to minimize battery drain.
