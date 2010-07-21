@@ -1,3 +1,5 @@
+# imported from CM6/HTC Hero
+
 # 0xC0000000 - 0xFFFFFFFF Kernel
 # 0xB0100000 - 0xBFFFFFFF Thread 0 Stack
 # 0xB0000000 - 0xB00FFFFF Linker
