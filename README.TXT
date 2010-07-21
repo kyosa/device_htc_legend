@@ -21,12 +21,6 @@ README.TXT: device_htc_legend.git
   $ repo sync
 
 
-  Obtain an OTA package from *ANYWHERE* and copy to android-cm/.
-  NOTE: sorry, extract-files.sh does not work yet.
-
-  $ cp ....... legend_update.zip
-
-
   Setup vendor
 
   $ cd vendor/cyanogen/
@@ -40,14 +34,14 @@ README.TXT: device_htc_legend.git
   $ git clone git://github.com/kyosa/device_htc_legend
   $ mv device_htc_legend/ legend
   $ cd legend/
-  $ ./unzip-files.sh 
   $ tar -zxvf mydroid.patch.tgz -C ../../..
 
-    (experimental)
-    If you like to try with 'TARGET_ARCH_VARIANT := armv6-vfp',
-    type also the following command.
 
-    $ tar -zxvf armv6-vfp.tgz -C ../../..
+  Prepair HTC Legend proprietary
+
+  (Connect your Legend to PC via USB cable. Then confirm that adb works.)
+  $ ./extract-files.sh
+
 
   $ cd ../../..
 
@@ -61,9 +55,6 @@ README.TXT: device_htc_legend.git
 
   Build CM6
 
-  $ make acp
-  (to avoid errors on distributed building)
-
   $ make -j4 otapackage
 
 
@@ -72,13 +63,9 @@ README.TXT: device_htc_legend.git
   CyanogenMod team
 
   All XDA members, 
-    especially, HTC Hero/Sapphire developers and contributors
-            and member in the developer forum of HTC Legend
-
-
-* History
-
-  Thu Jul 8 2010: by kyosa: the first commit
+    especially,
+      HTC Hero/Sapphire developers and contributors and
+      Members in the developer's forum of HTC Legend
 
 
 ----

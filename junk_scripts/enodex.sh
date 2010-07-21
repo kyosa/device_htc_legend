@@ -34,4 +34,4 @@ cd ../..
 zip -r ../update.zip *
 
 cd ..
-java -jar $PWD/out/host/linux-x86/framework/signapk.jar $PWD/build/target/product/security/testkey.x509.pem $PWD/build/target/product/security/testkey.pk8 update.zip legend_CM6.0.0a_kyosa_build.zip
+java -jar $PWD/out/host/linux-x86/framework/signapk.jar $PWD/build/target/product/security/testkey.x509.pem $PWD/build/target/product/security/testkey.pk8 update.zip legend_CM6.0.0RC1_build.zip
