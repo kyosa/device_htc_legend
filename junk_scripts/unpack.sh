@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PWD=`pwd`
-IN_DIR=$PWD
+IN_DIR=$PWD/../../../../out/target/product/legend
 BOOT_IMG=$IN_DIR/boot.img
 OUT_DIR=$PWD/out
 BOOT_UNPACK_DIR=$OUT_DIR/boot_unpack
