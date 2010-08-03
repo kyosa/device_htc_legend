@@ -115,7 +115,6 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/legend/overlay
 # media profiles and capabilities spec
 PRODUCT_COPY_FILES += \
     device/htc/legend/media_profiles.xml:system/etc/media_profiles.xml
-$(call inherit-product, device/htc/legend/media_a1026.mk)
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common_small.mk)
