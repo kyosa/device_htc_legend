@@ -3,7 +3,7 @@ README.TXT: device_htc_legend.git
 
 * Description
 
-  This repository is for the CyanogenMod 6.0.0-alpha on HTC Legend.
+  This repository is for the CyanogenMod 6.0.0-RC2 on HTC Legend.
   It is still under working.
 
 
